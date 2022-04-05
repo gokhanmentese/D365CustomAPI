@@ -40,7 +40,7 @@ namespace Test.Console
                 ISerializer serializer = new JsonSerializer();
                 var leadJson = serializer.Serialize(lead);
 
-                var req = new OrganizationRequest("new_addlead")
+                var req = new OrganizationRequest("new_AddLead")
                 {
                     ["Lead"] = leadJson
                 };
@@ -48,6 +48,7 @@ namespace Test.Console
                 var resp = crmService.Execute(req);
 
                 var result = (string)resp["Result"];
+                var recordId = (string)resp["RecordId"];
 
                 System.Console.WriteLine("Custom api response :{0} ", result);
             }
