@@ -111,7 +111,7 @@ namespace D365.CustomApi.Model
 
         internal static string AddLead
         {
-            get { return "new_addlead"; }
+            get { return "new_AddLead"; }
         }
         #endregion
     }
